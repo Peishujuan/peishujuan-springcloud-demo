@@ -12,5 +12,5 @@ public class Order {
     private Integer id;
     private String orderno;
     private Integer UserId;
-
+    private String username;
 }
