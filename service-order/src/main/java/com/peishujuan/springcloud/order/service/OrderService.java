@@ -1,10 +1,16 @@
 package com.peishujuan.springcloud.order.service;
 
+import com.peishujuan.springcloud.order.mapper.OrderMapper;
 import com.peishujuan.springcloud.order.model.Order;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class OrderService {
+    @Autowired
+    OrderMapper orderMapper;
     /**
      * 根据Id，查询order
      * @param id
@@ -19,4 +25,7 @@ public class OrderService {
     }
 
 
+    public List findAll() {
+        return orderMapper.findAll();
+    }
 }
